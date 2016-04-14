@@ -12,11 +12,17 @@
   </div>
 </div>
 
-<%= form_for(@message) do |f| %>
-  名前:
-  <%= f.text_field :name %>
 
+<%= form_for(@message) do |f| %>
+<form class="form-horizontal">
+  <div class="form-group">
+  名前:
+  <%= f.text_area :name, size: "20x1" %>
+  </div>
+
+  <div class="form-group">
   内容:
-  <%= f.text_field :body %>
+  <%= f.text_area :body, size: "20x1" %>
+  </div>
   <%= f.submit class: "btn btn-sm btn-primary" %>
 <% end %>
